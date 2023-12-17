@@ -54,5 +54,13 @@
 
    https://i.postimg.cc/xCjtD5KZ/101.png
 
+2. Создаем ветку "feature-login" для разработки новой функциональности:
+
+         git checkout -b feature-login
+   
+4. Вносим изменения в файл example2.txt
+
+   https://i.postimg.cc/gkgyCS8h/102.png
+
 
        
