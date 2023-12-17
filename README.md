@@ -115,3 +115,25 @@
          git add example2.txt
          git commit -m "Resolved conflict in chapter 2"
          git push origin main
+## Автоматизация проверки формата файлов при коммите
+
+1. Для решения задачи автоматизации проверки формата файлов при коммите с использованием Git Hooks создаем bash-скрипт (например, check_format.sh),
+который будет выполнять проверку расширения .txt файлов. 
+Текст скрипта
+[![106.png](https://i.postimg.cc/sfnTmnnM/106.png)](https://postimg.cc/hhd8P0Rn)
+
+Результаты выполнения
+
+[![105.png](https://i.postimg.cc/c49rk3Y1/105.png)](https://postimg.cc/YhFrhhbT)
+
+ 2. Добавили скрипт в репозиторий. Скопировали скрипт в .git/hooks и назвали его pre-commit. Проверили права на выполнение.
+
+          cp check_format.sh .git/hooks/pre-commit
+          chmod +x .git/hooks/pre-commit
+
+ 3.  Внесли изменения и закоммитили .
+     Теперь, при каждой попытке закоммитить изменения, Git будет автоматически выполнять проверку формата файлов перед коммитом. 
+
+          git add .
+          git commit -m "Add changes"
+
