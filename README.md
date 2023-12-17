@@ -52,7 +52,7 @@
 
 1. Создаем с помощью редактора Gedit новый текстовый файл example2.txt с базовой структурой книги:
 
-   [101.png](https://postimg.cc/3y6g2gfj)
+  [![101.png](https://i.postimg.cc/xCjtD5KZ/101.png)](https://postimg.cc/3y6g2gfj)
 
 2. Создаем ветку "feature-login" для разработки новой функциональности:
 
@@ -60,7 +60,7 @@
    
 3. Вносим изменения в файл example2.txt
 
-  [102.png](https://postimg.cc/YhmmgxX2)
+  [![102.png](https://i.postimg.cc/gkgyCS8h/102.png)](https://postimg.cc/YhmmgxX2)
 
 4. Делаем коммит изменений и отправляем ветку на GitHub:
 
@@ -77,7 +77,7 @@
 
 2. Вносим изменения в основной ветке (добавляем описание книги):
 
-[103.png](https://postimg.cc/QVKrGXjt)
+[![103.png](https://i.postimg.cc/L4N4PX7z/103.png)](https://postimg.cc/QVKrGXjt)
 
 3. Делаем коммит изменений и отправляем ветку на GitHub:
 
