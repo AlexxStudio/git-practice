@@ -35,7 +35,19 @@
     
          git commit -m "File updated example.txt"
 
-   Пушим изменения в ветку feature-branch командой `git push origin feature-branch`:
+    Пушим изменения в ветку feature-branch командой 
+   
+         git push origin feature-branch
+
+5. Переключаемся обратно в основную ветку  main :
+
+         git checkout main
+
+   Сливаем изменения из ветки feature-branch в основную ветку:
+
+         git merge feature-branch
+         git push origin main
+
 
 
        
