@@ -115,6 +115,7 @@
          git add example2.txt
          git commit -m "Resolved conflict in chapter 2"
          git push origin main
+   
 ## Автоматизация проверки формата файлов при коммите
 
 1. Для решения задачи автоматизации проверки формата файлов при коммите с использованием Git Hooks создаем bash-скрипт (например, check_format.sh),
@@ -137,3 +138,97 @@
           git add .
           git commit -m "Add changes"
 
+## Использование Git Flow в проекте
+
+Интегрировали Git Flow в проект для управления циклом разработки, создания релизов и управления hotfixes. 
+1. Устанавливаем  Git Flow на локальную машину:
+
+           sudo apt-get install git-flow
+
+[![107.png](https://i.postimg.cc/1X8sCsdW/107.png)](https://postimg.cc/dZcbDPwd)
+
+2. Создаем ветку "task-management" и выполняем инициализацию Git Flow.
+
+            git branch task-management
+            git flow init
+[![110.png](https://i.postimg.cc/B6t8x9Jg/110.png)](https://postimg.cc/62J5XP22)
+
+3. Создаем ветку для новой функциональности "task-management":
+
+            git flow feature start task-management
+
+[![109.png](https://i.postimg.cc/HnJNMxJt/109.png)](https://postimg.cc/q6TQVpxt)
+
+4. Внесите изменения в код для добавления функционала управления задачами (например, в файл task_manager.py):
+
+```
+def create_task(title, description):
+    # Логика создания задачи
+    print(f"Создана новая задача: {title}")
+```
+
+Выполните коммит изменения по мере разработки:
+
+```
+git add task_manager.py
+git commit -m "Добавлен функционал управления задачами"
+
+
+```
+
+5. После завершения разработки функции завершите фичу и объедините ее с основной веткой:
+
+```
+git flow feature finish task-management
+
+```
+
+Git Flow автоматически переключится на ветку develop и выполнит слияние. Если есть конфликты, их нужно разрешить.
+
+6. Переключитесь на ветку "develop" и начните создание релиза:
+
+```
+git checkout develop
+git flow release start v1.0.0
+```
+
+7. Внесите изменения, связанные с релизом (например, обновите версию в файле version.txt):
+
+```
+echo "v1.0.0" > version.txt
+git add version.txt
+git commit -m "Обновлена версия для релиза v1.0.0"
+
+```
+
+8. Завершите релиз и объедините его с ветками "develop" и "main":
+
+```
+git flow release finish v1.0.0
+```
+
+9. Если в процессе использования выявлена критическая ошибка, создайте hotfix:
+
+```
+git flow hotfix start hotfix-1.0.1
+```
+
+10. Внесите изменения для исправления ошибки и коммитите:
+
+```
+# Исправление ошибки
+git add file_with_error.py
+git commit -m "Исправлена критическая ошибка"
+```
+
+11. Завершите hotfix и объедините его с ветками "develop" и "main":
+
+```
+git flow hotfix finish hotfix-1.0.1
+```
+
+12. Завершение работы и отправка изменений на удаленный репозиторий. Отправьте изменения на удаленный репозиторий:
+
+```
+git push origin develop
+git push origin main
