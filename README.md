@@ -25,4 +25,17 @@
          git branch feature-branch
     
          git checkout feature-branch
+4.  Добавляем в файл example.txt текст.
+
+    Добавляем в новую ветку файл командой
+    
+         git add example.txt
+
+    Делаем коммит изменений командой
+    
+         git commit -m "File updated example.txt"
+
+   Пушим изменения в ветку feature-branch командой `git push origin feature-branch`:
+
+
        
