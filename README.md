@@ -15,10 +15,10 @@
  
     Возвращаемся в терминал и вводим команды :
  
-       git add example.txt
+          git add example.txt
     
-       git commit -m "File added example.txt"
+          git commit -m "File added example.txt"
 
-       git push origin main
+          git push origin main
 
        
