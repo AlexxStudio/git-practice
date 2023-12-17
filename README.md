@@ -97,8 +97,21 @@
 
 3. Закоммичиваем изменения и отправляем их на GitHub:
 
-         git add README.md
-         git commit -m "Добавлен раздел о магии конфликтов"
+         git add exmaple2.txt
+         git commit -m "Added section about conflict magic"
          git push origin feature-login
 
-       
+## Разрешение конфликта
+
+1. Возвращаемся в основную ветку и сливаем изменения:
+
+         git checkout main
+         git pull origin main
+
+2. Возникает конфликт, разрешаем конфликт ,редактируя example2.txt и  удалив метки и оставив нужные изменения.
+
+3. Закоммичиваем разрешение конфликта и отправляем изменения на GitHub:
+
+         git add example2.txt
+         git commit -m "Resolved conflict in chapter 2"
+         git push origin main
