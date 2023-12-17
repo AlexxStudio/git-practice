@@ -11,7 +11,7 @@
          git clone git@github.com:AlexxStudio/git-practice.git
 
          cd git-practice
-2.  Создаем новый текстовый файл  example.txt и добавляем в него текст, например, структуру книги (главы, параграфы...)
+2.  Создаем с помощью редактора Nano новый текстовый файл  example.txt и добавляем в него текст.
  
     Возвращаемся в терминал и вводим команды :
  
@@ -20,5 +20,9 @@
           git commit -m "File added example.txt"
 
           git push origin main
+3.  Создаем новую ветку с названием  feature-branch  и переключаемся на нее:
 
+         git branch feature-branch
+    
+         git checkout feature-branch
        
