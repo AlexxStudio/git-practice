@@ -8,9 +8,9 @@
    
     Вводим команды, используя скопированный URL:
 
-         'git clone git@github.com:AlexxStudio/git-practice.git'
+         git clone git@github.com:AlexxStudio/git-practice.git
 
-         'cd git-practice'
+         cd git-practice
 2.   Добавление файла:
     Создаем новый текстовый файл  example.txt и добавляем в него текст, например, структуру книги (главы, параграфы...)
 
