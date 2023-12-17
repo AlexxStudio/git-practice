@@ -58,9 +58,16 @@
 
          git checkout -b feature-login
    
-4. Вносим изменения в файл example2.txt
+3. Вносим изменения в файл example2.txt
 
    https://i.postimg.cc/gkgyCS8h/102.png
+
+4. Делаем коммит изменений и отправляем ветку на GitHub:
+
+         git add example2.txt
+         git commit -m "Добавлена глава 3: Вход в систему"
+         git push origin feature-login
+
 
 
        
