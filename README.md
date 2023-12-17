@@ -52,7 +52,7 @@
 
 1. Создаем с помощью редактора Gedit новый текстовый файл example2.txt с базовой структурой книги:
 
-   https://i.postimg.cc/xCjtD5KZ/101.png
+   [101.png](https://postimg.cc/3y6g2gfj)
 
 2. Создаем ветку "feature-login" для разработки новой функциональности:
 
@@ -60,13 +60,30 @@
    
 3. Вносим изменения в файл example2.txt
 
-   https://i.postimg.cc/gkgyCS8h/102.png
+  [102.png](https://postimg.cc/YhmmgxX2)
 
 4. Делаем коммит изменений и отправляем ветку на GitHub:
 
          git add example2.txt
          git commit -m "Добавлена глава 3: Вход в систему"
          git push origin feature-login
+
+
+## Работа с удаленным репозиторием
+
+1. Переключаемся на основную ветку (main) и вносим изменения:
+
+         git checkout main
+
+2. Вносим изменения в основной ветке (добавляем описание книги):
+
+[103.png](https://postimg.cc/QVKrGXjt)
+
+3. Делаем коммит изменений и отправляем ветку на GitHub:
+
+         git add example2.txt
+         git commit -m "Изменено название книги и введение"
+         git push origin main
 
 
 
