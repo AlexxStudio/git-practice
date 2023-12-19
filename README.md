@@ -169,36 +169,40 @@
 
 [![111.png](https://i.postimg.cc/TYWys8Zm/111.png)](https://postimg.cc/bspNG5YN)
 
-5. После завершения разработки функции завершите фичу и объедините ее с основной веткой:
+5. После завершения разработки функции завершаем фичу и объединяем ее с основной веткой:
 
-```
-git flow feature finish task-management
+            git flow feature finish task-management
 
-```
+[![112.png](https://i.postimg.cc/8cLbNF7Q/112.png)](https://postimg.cc/p5XjBLQq)
 
-Git Flow автоматически переключится на ветку develop и выполнит слияние. Если есть конфликты, их нужно разрешить.
+Git Flow автоматически переключился на ветку task-management и выполнил слияние. 
 
-6. Переключитесь на ветку "develop" и начните создание релиза:
+6. Создаем ветку "develop"
+   
+         git checkout -b develop
+   `
+   [![113.png](https://i.postimg.cc/MTkypygP/113.png)](https://postimg.cc/p9Z90nWz)
+   
+   и начинаем релиз:
 
-```
-git checkout develop
-git flow release start v1.0.0
-```
+         git flow release start v1.0.0
+   
+   [![114.png](https://i.postimg.cc/RVsXwChc/114.png)](https://postimg.cc/2VWQDD46)
 
-7. Внесите изменения, связанные с релизом (например, обновите версию в файле version.txt):
 
-```
-echo "v1.0.0" > version.txt
-git add version.txt
-git commit -m "Обновлена версия для релиза v1.0.0"
+8. Вносим изменения, связанные с релизом (обновляем версию в файле version.txt):
 
-```
+         echo "v1.0.0" > version.txt
+         git add version.txt
+         git commit -m "Обновлена версия для релиза v1.0.0"
 
-8. Завершите релиз и объедините его с ветками "develop" и "main":
+[![115.png](https://i.postimg.cc/QtNrHxVR/115.png)](https://postimg.cc/f3PPPscK)
 
-```
-git flow release finish v1.0.0
-```
+8. Завершаем релиз и объединяем его с ветками "develop" и "main":
+
+         git flow release finish v1.0.0
+
+[![116.png](https://i.postimg.cc/0QDGzmHN/116.png)](https://postimg.cc/S2QY5X40)
 
 9. Если в процессе использования выявлена критическая ошибка, создайте hotfix:
 
