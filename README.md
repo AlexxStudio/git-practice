@@ -198,34 +198,20 @@ Git Flow автоматически переключился на ветку tas
 
 [![115.png](https://i.postimg.cc/QtNrHxVR/115.png)](https://postimg.cc/f3PPPscK)
 
-8. Завершаем релиз и объединяем его с ветками "develop" и "main":
+8. Завершаем релиз :
 
          git flow release finish v1.0.0
 
 [![116.png](https://i.postimg.cc/0QDGzmHN/116.png)](https://postimg.cc/S2QY5X40)
 
-9. Если в процессе использования выявлена критическая ошибка, создайте hotfix:
+   Конфликтов не обнаружено
 
-```
-git flow hotfix start hotfix-1.0.1
-```
+12. Завершаем работу и отправляем изменения на удаленный репозиторий:
 
-10. Внесите изменения для исправления ошибки и коммитите:
+      git push origin develop
 
-```
-# Исправление ошибки
-git add file_with_error.py
-git commit -m "Исправлена критическая ошибка"
-```
+[![120.png](https://i.postimg.cc/zvpKRH9Z/120.png)](https://postimg.cc/9wRr60mJ)
 
-11. Завершите hotfix и объедините его с ветками "develop" и "main":
+      git push origin main
 
-```
-git flow hotfix finish hotfix-1.0.1
-```
 
-12. Завершение работы и отправка изменений на удаленный репозиторий. Отправьте изменения на удаленный репозиторий:
-
-```
-git push origin develop
-git push origin main
