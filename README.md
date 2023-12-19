@@ -159,7 +159,13 @@
 
 [![109.png](https://i.postimg.cc/HnJNMxJt/109.png)](https://postimg.cc/q6TQVpxt)
 
-4. Внесите изменения в код для добавления функционала управления задачами (например, в файл task_manager.py):
+4. Создаем файл task_manager.py и добавляем этот файл в Git командой
+
+            git add task_manager.py
+   
+   Коммитим изменения
+
+            git commit -m
 
 ```
 def create_task(title, description):
