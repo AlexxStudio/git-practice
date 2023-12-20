@@ -115,6 +115,7 @@
          git add example2.txt
          git commit -m "Resolved conflict in chapter 2"
          git push origin main
+   
 ## Автоматизация проверки формата файлов при коммите
 
 1. Для решения задачи автоматизации проверки формата файлов при коммите с использованием Git Hooks создаем bash-скрипт (например, check_format.sh),
@@ -136,4 +137,81 @@
 
           git add .
           git commit -m "Add changes"
+
+## Использование Git Flow в проекте
+
+Интегрировали Git Flow в проект для управления циклом разработки, создания релизов и управления hotfixes. 
+1. Устанавливаем  Git Flow на локальную машину:
+
+           sudo apt-get install git-flow
+
+[![107.png](https://i.postimg.cc/1X8sCsdW/107.png)](https://postimg.cc/dZcbDPwd)
+
+2. Создаем ветку "task-management" и выполняем инициализацию Git Flow.
+
+            git branch task-management
+            git flow init
+[![110.png](https://i.postimg.cc/B6t8x9Jg/110.png)](https://postimg.cc/62J5XP22)
+
+3. Создаем ветку для новой функциональности "task-management":
+
+            git flow feature start task-management
+
+[![109.png](https://i.postimg.cc/HnJNMxJt/109.png)](https://postimg.cc/q6TQVpxt)
+
+4. Создаем файл task_manager.py и добавляем этот файл в Git командой
+
+            git add task_manager.py
+   
+   Коммитим изменения
+
+            git commit -m "Добавлен функционал управления задачами"
+
+[![111.png](https://i.postimg.cc/TYWys8Zm/111.png)](https://postimg.cc/bspNG5YN)
+
+5. После завершения разработки функции завершаем фичу и объединяем ее с основной веткой:
+
+            git flow feature finish task-management
+
+[![112.png](https://i.postimg.cc/8cLbNF7Q/112.png)](https://postimg.cc/p5XjBLQq)
+
+Git Flow автоматически переключился на ветку task-management и выполнил слияние. 
+
+6. Создаем ветку "develop"
+   
+         git checkout -b develop
+   `
+   [![113.png](https://i.postimg.cc/MTkypygP/113.png)](https://postimg.cc/p9Z90nWz)
+   
+   и начинаем релиз:
+
+         git flow release start v1.0.0
+   
+   [![114.png](https://i.postimg.cc/RVsXwChc/114.png)](https://postimg.cc/2VWQDD46)
+
+
+8. Вносим изменения, связанные с релизом (обновляем версию в файле version.txt):
+
+         echo "v1.0.0" > version.txt
+         git add version.txt
+         git commit -m "Обновлена версия для релиза v1.0.0"
+
+[![115.png](https://i.postimg.cc/QtNrHxVR/115.png)](https://postimg.cc/f3PPPscK)
+
+8. Завершаем релиз :
+
+         git flow release finish v1.0.0
+
+[![116.png](https://i.postimg.cc/0QDGzmHN/116.png)](https://postimg.cc/S2QY5X40)
+
+   Конфликтов не обнаружено
+
+12. Завершаем работу и отправляем изменения на удаленный репозиторий:
+
+      git push origin develop
+
+[![120.png](https://i.postimg.cc/zvpKRH9Z/120.png)](https://postimg.cc/9wRr60mJ)
+
+      git push origin main
+
 
